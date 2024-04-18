@@ -98,3 +98,49 @@ int calcGCD(int n, int m){
         }
         return ans;
 }
+
+
+
+Problem statement
+You are given an integer 'n'. Return 'true' if 'n' is an Armstrong number, and 'false' otherwise.
+
+
+
+Note:
+An Armstrong number is a number (with 'k' digits) such that the sum of its digits raised to 'kth' power is equal to the 
+number itself. For example, 371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371.
+
+
+#include <math.h>
+bool checkArmstrong(int n){
+	//Write your code here
+	cin>>n;
+	int z=n;
+	int c=n;
+
+	int ans=0,mod,count=0,arm=0;
+	while(n>0){
+		n=n/10;
+		count=count+1;
+		
+	}
+
+
+	while(z>0){
+		mod=z%10;
+		arm=pow(mod,count)+arm;
+		z=z/10;
+
+	}
+
+	
+
+	if(c==arm){
+		return true;
+	}
+	else
+	return false;
+}
+
+
+
