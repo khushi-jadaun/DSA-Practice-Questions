@@ -1,4 +1,4 @@
-Problem statement
+1.Problem statement
 Check whether a given number ’n’ is a palindrome number.
 
 Note :
@@ -101,7 +101,7 @@ int calcGCD(int n, int m){
 
 
 
-Problem statement
+2. Problem statement
 You are given an integer 'n'. Return 'true' if 'n' is an Armstrong number, and 'false' otherwise.
 
 
@@ -222,7 +222,7 @@ int sumOfAllDivisors(int n){
 }
 
 
-Problem statement
+3. Problem statement
 A prime number is a positive integer that is divisible by exactly 2 integers, 1 and the number itself.
 
 
@@ -304,3 +304,100 @@ bool isPrime(int n)
 }
 
 
+4. Problem statement
+You are given an integer ‘n’.
+
+
+
+Your task is to return an array containing integers from 1 to ‘n’ (in increasing order) without using loops.
+
+
+
+Example:
+Input: ‘n’ = 5
+
+Output: 1 2 3 4 5
+
+Explanation: An array containing integers from ‘1’ to ‘n’ is [1, 2, 3, 4, 5].
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+5
+Sample Output 1 :
+1 2 3 4 5
+Explanation Of Sample Input 1:
+The array contains all integers from 1 to 5 in ascending order.
+Sample Input 2:
+2
+Sample Output 2:
+1 2
+Explanation Of Sample Input 2:
+The array contains all integers from 1 to 2 in ascending order.
+Expected Time Complexity:
+The expected time complexity is O(n), where 'n' is the given integer.
+Constraints:
+1 <= n <= 10^6
+
+Time Limit: 1-sec
+
+
+#include <vector>
+vector<int> printNos(int x) {
+    // Write Your Code Here
+    if(x==0) return vector<int>();
+   
+    vector<int> result =printNos(x-1);
+     result.push_back(x);
+     return result;
+}
+
+
+5. Problem statement
+You are given an integer ‘n’.
+
+
+
+Your task is determining the sum of the first ‘n’ natural numbers and returning it.
+
+
+
+Example:
+Input: ‘n’ = 3
+
+Output: 6
+
+Explanation: The sum of the first 3 natural numbers is 1 + 2 + 3, equal to 6.
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+3
+Sample Output 1 :
+6
+Explanation Of Sample Input 1:
+Input: ‘n’ = 3
+
+Output: 6
+
+Explanation: The sum of the first 3 natural numbers is 1 + 2 + 3, equal to 6.
+Sample Input 2:
+5
+Sample Output 2:
+15
+Explanation of sample output 2:
+Input: ‘n’ = 5
+
+Output: 15
+
+Explanation: The sum of the first 5 natural numbers is 1 + 2 + 3 + 4 + 5, equal to 15.
+Expected Time Complexity:
+The expected time complexity is O(1).
+Expected Space Complexity:
+The expected space complexity is O(1).
+Constraints:
+1 <= n <= 10^9
+Time Limit: 1 sec
+
+long long sumFirstN(long long n) {
+    // Write your code here.
+    if(n==0) return 0;
+   return  (n+sumFirstN(n-1));
+
+}
